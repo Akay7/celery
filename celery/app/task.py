@@ -886,7 +886,6 @@ class Task:
             # ensure that we don't disassociate the new chain from the existing
             # task IDs which would break previously constructed results
             # objects.
-            options = sig.options.copy()
             sig.freeze(self.request.id)
             if "link" in sig.options:
                 final_task_links = sig.tasks[-1].options.setdefault("link", [])
